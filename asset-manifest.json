@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/cd-project-test-assignment-front-end/static/css/main.6a595b88.chunk.css",
-    "main.js": "/cd-project-test-assignment-front-end/static/js/main.84ec62c4.chunk.js",
-    "main.js.map": "/cd-project-test-assignment-front-end/static/js/main.84ec62c4.chunk.js.map",
+    "main.js": "/cd-project-test-assignment-front-end/static/js/main.90c0df86.chunk.js",
+    "main.js.map": "/cd-project-test-assignment-front-end/static/js/main.90c0df86.chunk.js.map",
     "runtime-main.js": "/cd-project-test-assignment-front-end/static/js/runtime-main.fb805755.js",
     "runtime-main.js.map": "/cd-project-test-assignment-front-end/static/js/runtime-main.fb805755.js.map",
     "static/css/2.0c45cfc8.chunk.css": "/cd-project-test-assignment-front-end/static/css/2.0c45cfc8.chunk.css",
-    "static/js/2.3a8673b7.chunk.js": "/cd-project-test-assignment-front-end/static/js/2.3a8673b7.chunk.js",
-    "static/js/2.3a8673b7.chunk.js.map": "/cd-project-test-assignment-front-end/static/js/2.3a8673b7.chunk.js.map",
+    "static/js/2.306e6042.chunk.js": "/cd-project-test-assignment-front-end/static/js/2.306e6042.chunk.js",
+    "static/js/2.306e6042.chunk.js.map": "/cd-project-test-assignment-front-end/static/js/2.306e6042.chunk.js.map",
     "index.html": "/cd-project-test-assignment-front-end/index.html",
-    "precache-manifest.a34c0692b308c6d2705f3755b3bf3277.js": "/cd-project-test-assignment-front-end/precache-manifest.a34c0692b308c6d2705f3755b3bf3277.js",
+    "precache-manifest.7b2c857db8ceaf2416d5553da8763da9.js": "/cd-project-test-assignment-front-end/precache-manifest.7b2c857db8ceaf2416d5553da8763da9.js",
     "service-worker.js": "/cd-project-test-assignment-front-end/service-worker.js",
     "static/css/2.0c45cfc8.chunk.css.map": "/cd-project-test-assignment-front-end/static/css/2.0c45cfc8.chunk.css.map",
     "static/css/main.6a595b88.chunk.css.map": "/cd-project-test-assignment-front-end/static/css/main.6a595b88.chunk.css.map",
-    "static/js/2.3a8673b7.chunk.js.LICENSE.txt": "/cd-project-test-assignment-front-end/static/js/2.3a8673b7.chunk.js.LICENSE.txt",
+    "static/js/2.306e6042.chunk.js.LICENSE.txt": "/cd-project-test-assignment-front-end/static/js/2.306e6042.chunk.js.LICENSE.txt",
     "static/media/twitter-logo.svg": "/cd-project-test-assignment-front-end/static/media/twitter-logo.b4d7c717.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.fb805755.js",
     "static/css/2.0c45cfc8.chunk.css",
-    "static/js/2.3a8673b7.chunk.js",
+    "static/js/2.306e6042.chunk.js",
     "static/css/main.6a595b88.chunk.css",
-    "static/js/main.84ec62c4.chunk.js"
+    "static/js/main.90c0df86.chunk.js"
   ]
 }
