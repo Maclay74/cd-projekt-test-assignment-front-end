@@ -1,8 +1,8 @@
 import React from "react";
 import styles from './style.module.scss'
-import { Card, Table, Typography } from "antd";
+import { Card, Table, Typography, Alert } from "antd";
 
-const TweetsTable = ({tweets, page, pageSize, count, onPageChange, onPageSizeChange, isLoading}) => {
+const TweetsTable = ({tweets, page, pageSize, count, onPageChange, onPageSizeChange, isLoading, error}) => {
 
     const columns = [
         { title: 'ID', dataIndex: 'id', key: 'id' },
@@ -28,6 +28,9 @@ const TweetsTable = ({tweets, page, pageSize, count, onPageChange, onPageSizeCha
                 onShowSizeChange: (current, size) => onPageSizeChange(size)
             }}
         />
+
+        {!!error && <Alert type={'error'} message={error}/>}
+
     </Card>);
 
 }

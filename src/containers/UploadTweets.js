@@ -13,13 +13,8 @@ class UploadTweets extends React.Component {
 
     async uploadTweets(tweets) {
         const { afterUpdate } = this.props
-
-        try {
-            await request('tweets/upload', {tweets}, 'post')
-            await afterUpdate()
-        } catch(e) {
-            console.warn('Error with uploading tweets')
-        }
+        await request('tweets/upload', {tweets}, 'post')
+        await afterUpdate()
     }
 
     async truncateTable() {

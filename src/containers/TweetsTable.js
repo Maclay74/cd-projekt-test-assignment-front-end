@@ -14,6 +14,7 @@ class TweetsTable extends React.Component {
             sort: null,
             tweets: [],
             isLoading: false,
+            error: null,
         }
 
         this.sortOptions = [
@@ -71,17 +72,30 @@ class TweetsTable extends React.Component {
             isLoading: true,
         }, async () => {
 
-            const response = await request('tweets/index', {
-                page, pageSize, sort
-            }, 'get')
+            let tweets = [];
+            let count = 0;
+            let error = null;
 
-            const {tweets, count} = response.data;
+            try {
+                const response = await request('tweets/index', {
+                    page, pageSize, sort
+                }, 'get');
 
-            this.setState({
-                tweets: this.mapTweetsFromApi(tweets),
-                count: parseInt(count),
-                isLoading: false,
-            })
+                ({tweets, count} = response.data);
+
+            } catch (e) {
+                if (!e.response) {
+                    error = 'Unable to connect to server'
+                }
+            } finally {
+                this.setState({
+                    tweets: this.mapTweetsFromApi(tweets),
+                    count: parseInt(count),
+                    isLoading: false,
+                    error,
+                })
+            }
+
         })
     }
 

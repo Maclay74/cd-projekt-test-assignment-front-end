@@ -1,9 +1,20 @@
 import React from "react";
-import {Upload, Icon, Modal, Card, Typography, Button } from "antd";
+import {Upload, Icon, Modal, Card, Typography, Button, message } from "antd";
 import { parseCsv, mapRowsToFields } from "../../services/parse-cvs";
 import styles from './style.module.scss'
 
 const TweetsUpload = ({uploadTweets, truncateTable }) => {
+
+    const onUpload = async (records) => {
+
+        try {
+            await uploadTweets(records)
+            message.success(`Wow! ${records.length} tweets were successfully uploaded!`)
+        } catch (e) {
+            message.error('Something went wrong with uploading tweets')
+            console.log(e.response)
+        }
+    }
 
     const config = {
         name: 'file',
@@ -14,12 +25,12 @@ const TweetsUpload = ({uploadTweets, truncateTable }) => {
 
             await new Promise(resolve => {
                 Modal.confirm({
-                    title: 'Upload',
+                    title: 'Upload tweets',
                     content: `${records.length} records were successfully parsed, upload them at the speed of light?`,
                     onOk: async () => {
-                        await uploadTweets(records)
-                        resolve();
+                        await onUpload(records)
                         data.onSuccess(true)
+                        resolve();
                     },
                     okText: 'Upload',
                     type: 'info',
